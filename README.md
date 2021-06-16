@@ -1,5 +1,5 @@
 # `Neko+`
-private 1.12 utility mod.
+Leaked for stupid reasons. please leave a star and follow me. i wont provide ANY support
 ### `credits:`
 Head dev: Vaimok.
 
