@@ -1,8 +1,8 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.features.modules.client.HUD;
-import me.vaimok.nekoplus.features.modules.render.NoRender;
 import me.vaimok.nekoplus.nekoplus;
+import me.vaimok.nekoplus.client.modules.client.HUD;
+import me.vaimok.nekoplus.client.modules.render.NoRender;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiIngame;
 import net.minecraft.client.gui.ScaledResolution;

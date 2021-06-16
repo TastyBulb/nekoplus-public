@@ -1,6 +1,6 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.util.Util;
+import me.vaimok.nekoplus.api.util.moduleUtil.Util;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.world.World;

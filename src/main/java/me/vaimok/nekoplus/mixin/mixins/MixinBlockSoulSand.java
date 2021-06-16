@@ -1,6 +1,6 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.features.modules.movement.NoSlow;
+import me.vaimok.nekoplus.client.modules.movement.NoSlow;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSoulSand;
 import net.minecraft.block.material.MapColor;

@@ -1,8 +1,8 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.features.modules.client.Managers;
-import me.vaimok.nekoplus.features.modules.render.NoRender;
 import me.vaimok.nekoplus.nekoplus;
+import me.vaimok.nekoplus.client.modules.client.Managers;
+import me.vaimok.nekoplus.client.modules.render.NoRender;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.client.multiplayer.WorldClient;

@@ -1,6 +1,6 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.features.modules.render.NoRender;
+import me.vaimok.nekoplus.client.modules.render.NoRender;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderLivingBase;
 import net.minecraft.client.renderer.entity.layers.LayerArmorBase;

@@ -1,8 +1,8 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
 import com.google.common.base.Predicate;
-import me.vaimok.nekoplus.event.events.PushEvent;
-import me.vaimok.nekoplus.features.modules.render.NoRender;
+import me.vaimok.nekoplus.api.event.events.PushEvent;
+import me.vaimok.nekoplus.client.modules.render.NoRender;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;

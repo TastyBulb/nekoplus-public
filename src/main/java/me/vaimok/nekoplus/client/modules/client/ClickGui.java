@@ -58,7 +58,7 @@ public class ClickGui extends Module {
 
     @Override
     public void onEnable() {
-            mc.displayGuiScreen(new nekoplusGui());
+        mc.displayGuiScreen(new nekoplusGui());
         if (customFov.getValue()) {
             mc.gameSettings.setOptionFloatValue(GameSettings.Options.FOV, fov.getValue());
         }
@@ -120,6 +120,14 @@ public class ClickGui extends Module {
     public void onTick() {
         if(!(mc.currentScreen instanceof nekoplusGui)) {
             this.disable();
+        }
+    }
+
+    @Override
+    public void onDisable() {
+        mc.entityRenderer.stopUseShader();
+        if(mc.currentScreen instanceof nekoplusGui) {
+            mc.displayGuiScreen(null);
         }
     }
 

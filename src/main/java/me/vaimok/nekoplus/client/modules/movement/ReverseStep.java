@@ -1,7 +1,7 @@
-package me.vaimok.nekoplus.features.modules.movement;
+package me.vaimok.nekoplus.client.modules.movement;
 
-import me.vaimok.nekoplus.features.modules.Module;
-import me.vaimok.nekoplus.features.setting.Setting;
+import me.vaimok.nekoplus.client.modules.Module;
+import me.vaimok.nekoplus.client.setting.Setting;
 
 public
 class ReverseStep extends Module {

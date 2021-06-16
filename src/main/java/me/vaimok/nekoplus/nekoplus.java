@@ -1,12 +1,7 @@
 package me.vaimok.nekoplus;
 
-import me.vaimok.nekoplus.auth.NoStackTraceThrowable;
-import me.vaimok.nekoplus.manager.*;
-import me.vaimok.nekoplus.util.RenderUtils.*;
-import me.vaimok.nekoplus.util.RenderUtils.FrameUtil;
-import me.vaimok.nekoplus.util.RenderUtils.HWIDUtil;
-import me.vaimok.nekoplus.util.RenderUtils.NetworkUtil;
-import me.vaimok.nekoplus.util.TrackerUtils.Tracker;
+
+import me.vaimok.nekoplus.api.manager.*;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -14,7 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.Display;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,13 +16,9 @@ import java.util.List;
 public
 class nekoplus {
 
-    public static List<String> hwidList = new ArrayList<>();
-    public static final String KEY = "verify";
-    public static final String HWID_URL = "https://pastebin.com/raw/3kMjtkdT";
-    public static final String UsernameURL = "https://pastebin.com/raw/T0wWg4w2";
     public static final String MODID = "nekoplus";
     public static final String MODNAME = "nekoplus";
-    public static final String MODVER = "0.4";
+    public static final String MODVER = "0.4.6";
     public static final Logger LOGGER = LogManager.getLogger ( "nekoplus" );
     public static ModuleManager moduleManager;
     public static SpeedManager speedManager;
@@ -108,7 +98,7 @@ class nekoplus {
         timerManager.init ( );
         LOGGER.info ( "nekoplus initialized!\n" );
 
-        Runtime.getRuntime().addShutdownHook(new Thread(Discord::shutdown));
+        Runtime.getRuntime().addShutdownHook(new Thread(DiscordUtil::shutdown));
     }
 
     public static
@@ -162,20 +152,6 @@ class nekoplus {
     @Mod.EventHandler
     public
     void preInit ( FMLPreInitializationEvent event ) {
-        new Tracker ();
-    }
-
-    public void Verify(){
-        //Here we get the HWID List From URL
-        hwidList = NetworkUtil.getHWIDList();
-
-        //Check HWID
-        if(!hwidList.contains(HWIDUtil.getEncryptedHWID(KEY))){
-            //Shutdown client and display message
-            FrameUtil.Display();
-            throw new NoStackTraceThrowable("Verify HWID Failed!");
-        }
-
     }
 
 

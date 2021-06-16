@@ -1,7 +1,7 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
 import io.netty.channel.ChannelHandlerContext;
-import me.vaimok.nekoplus.event.events.PacketEvent;
+import me.vaimok.nekoplus.api.event.events.PacketEvent;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraftforge.common.MinecraftForge;

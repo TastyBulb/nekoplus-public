@@ -58,6 +58,7 @@ class ModuleManager extends Client {
         //MOVEMENT
         modules.add ( new Velocity ( ) );
         modules.add ( new Step ( ) );
+        modules.add ( new ReverseStep ( ) );
         modules.add ( new Sprint ( ) );
         modules.add ( new NoSlow ( ) );
         modules.add ( new NoWeb ( ) );

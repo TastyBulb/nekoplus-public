@@ -1,10 +1,10 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
 import com.google.common.base.Predicate;
-import me.vaimok.nekoplus.features.modules.client.Notifications;
-import me.vaimok.nekoplus.features.modules.player.Speedmine;
-import me.vaimok.nekoplus.features.modules.render.CameraClip;
-import me.vaimok.nekoplus.features.modules.render.NoRender;
+import me.vaimok.nekoplus.client.modules.client.Notifications;
+import me.vaimok.nekoplus.client.modules.player.FastMine;
+import me.vaimok.nekoplus.client.modules.render.CameraClip;
+import me.vaimok.nekoplus.client.modules.render.NoRender;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -118,7 +118,7 @@ class MixinEntityRenderer {
     @Redirect(method = "getMouseOver", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/multiplayer/WorldClient;getEntitiesInAABBexcluding(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;Lcom/google/common/base/Predicate;)Ljava/util/List;"))
     public
     List < Entity > getEntitiesInAABBexcludingHook ( WorldClient worldClient , @Nullable Entity entityIn , AxisAlignedBB boundingBox , @Nullable Predicate < ? super Entity > predicate ) {
-        if ( Speedmine.getInstance ( ).isOn ( ) && Speedmine.getInstance ( ).noTrace.getValue ( ) && ( ! Speedmine.getInstance ( ).pickaxe.getValue ( ) || this.mc.player.getHeldItemMainhand ( ).getItem ( ) instanceof ItemPickaxe ) ) {
+        if ( FastMine.getInstance ( ).isOn ( ) && FastMine.getInstance ( ).noTrace.getValue ( ) && ( ! FastMine.getInstance ( ).pickaxe.getValue ( ) || this.mc.player.getHeldItemMainhand ( ).getItem ( ) instanceof ItemPickaxe ) ) {
             return new ArrayList <> ( );
         }
         return worldClient.getEntitiesInAABBexcluding ( entityIn , boundingBox , predicate );

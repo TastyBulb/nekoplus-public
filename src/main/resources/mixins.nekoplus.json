@@ -19,7 +19,6 @@
     "MixinItemRenderer",
     "MixinRenderPlayer",
     "MixinRender",
-    "MixinRenderEnderCrystal",
     "MixinRenderLivingBase",
     "MixinLayerBipedArmor",
     "MixinKeyBinding",

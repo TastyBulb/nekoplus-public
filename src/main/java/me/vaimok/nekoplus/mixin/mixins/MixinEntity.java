@@ -1,6 +1,6 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.event.events.PushEvent;
+import me.vaimok.nekoplus.api.event.events.PushEvent;
 import net.minecraft.entity.Entity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;

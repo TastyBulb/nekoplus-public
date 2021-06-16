@@ -1,6 +1,6 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.event.events.JesusEvent;
+import me.vaimok.nekoplus.api.event.events.JesusEvent;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.material.Material;

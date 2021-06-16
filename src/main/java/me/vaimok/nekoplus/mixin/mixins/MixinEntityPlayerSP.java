@@ -1,12 +1,12 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.event.events.ChatEvent;
-import me.vaimok.nekoplus.event.events.MoveEvent;
-import me.vaimok.nekoplus.event.events.PushEvent;
-import me.vaimok.nekoplus.event.events.UpdateWalkingPlayerEvent;
-import me.vaimok.nekoplus.features.modules.movement.Sprint;
+import me.vaimok.nekoplus.api.event.events.ChatEvent;
+import me.vaimok.nekoplus.api.event.events.MoveEvent;
+import me.vaimok.nekoplus.api.event.events.PushEvent;
+import me.vaimok.nekoplus.api.event.events.UpdateWalkingPlayerEvent;
+import me.vaimok.nekoplus.client.modules.movement.Sprint;
 import me.vaimok.nekoplus.nekoplus;
-import me.vaimok.nekoplus.util.Util;
+import me.vaimok.nekoplus.api.util.moduleUtil.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.entity.EntityPlayerSP;

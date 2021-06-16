@@ -1,8 +1,8 @@
 package me.vaimok.nekoplus.mixin.mixins;
 
-import me.vaimok.nekoplus.event.events.BlockEvent;
-import me.vaimok.nekoplus.event.events.ProcessRightClickBlockEvent;
-import me.vaimok.nekoplus.features.modules.player.Speedmine;
+import me.vaimok.nekoplus.api.event.events.BlockEvent;
+import me.vaimok.nekoplus.api.event.events.ProcessRightClickBlockEvent;
+import me.vaimok.nekoplus.client.modules.player.FastMine;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -42,7 +42,7 @@ class MixinPlayerControllerMP {
     @Inject(method = "resetBlockRemoving", at = @At("HEAD"), cancellable = true)
     public
     void resetBlockRemovingHook ( CallbackInfo info ) {
-        if ( Speedmine.getInstance ( ).isOn ( ) && Speedmine.getInstance ( ).reset.getValue ( ) ) {
+        if ( FastMine.getInstance ( ).isOn ( ) && FastMine.getInstance ( ).reset.getValue ( ) ) {
             info.cancel ( );
         }
     }
